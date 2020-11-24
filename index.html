@@ -12,21 +12,30 @@
 
         html{
             overflow-x: hidden;
+            user-select: none;
+            -webkit-user-select: none;
+            cursor: default;
         }
-        
+
         :root {
             color-scheme: light dark;
         }
 
         @media (prefers-color-scheme: light) {
             :root {
+                --color: #0b0b0b;
                 --background: #ffffff;
+                --background2: #eeeeee;
+                --shadow: rgba(0,0,0,0.5);
             }
         }
 
         @media (prefers-color-scheme: dark) {
             :root {
+                --color: #ffffff;
                 --background: #0b0b0b;
+                --background2: #1b1b1b;
+                --shadow: rgba(0,0,0,0.1);
             }
         }
 
@@ -34,7 +43,7 @@
             background-color: var(--background);
             margin:0;
             padding:0;
-
+            color: var(--color);
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-weight: 300;
         }
@@ -52,26 +61,31 @@
         }
         
         .drawer{
+            position: relative;
             margin-top:40vh;
-            background-color: #1b1b1b;
-            height: 150px;
+            background-color: var(--background2);
+            height: auto;
             width: 100vw;
+            box-shadow: inset 0px 0px 5px 0px var(--shadow);
+            padding-bottom: 50px;
         }
 
         .dl-button{
-            display: inline-block;
-            height: 40px;
-            width: 250px;
-            margin-top: 50px;
-            margin-left: 41vw;
+            display: block;
+            height: 50px;
+            width: 200px;
+            margin-top: 7.5vh;
+            margin-left: auto;
+            margin-right: auto;
             background-color: #007BFF;
-            border-radius:3px;
+            border-radius:5px;
             cursor:pointer;
             color:#ffffff;
-            font-size:15px;
+            font-size:20px;
+            font-weight: 200;
             text-decoration:none;
             
-            line-height: 40px;
+            line-height: 50px;
             text-align: center;
             -webkit-transition: background-color 1.0s;
             transition: background-color 1.0s;
@@ -83,7 +97,63 @@
             transition: background-color 0.5s;
         }
 
+        .title{
+            padding-top: 10px;
+            font-size: 50px;
+            font-weight: 100;
+        }
 
+        .subtitle{
+            font-size: 25px;
+            font-weight: 300;
+        }
+
+        .title, .subtitle{
+            margin-left: 20px;
+        }
+
+        .script-container{
+            position: relative;
+            height: 20vh;
+            width: 85vw;
+            background-color: var(--background);
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid var(--background);
+            border-radius: 10px;
+        }
+
+        .script-container .subtitle{
+            margin-top: 15px;
+            margin-left: 20px;
+            font-weight: 600;
+        }
+
+        .description{
+            height:60%;
+            margin-top: 15px;
+            margin-left: 20px;
+            width:54vw;
+            word-wrap: normal;
+        }
+
+        .button-container{
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            width: 30vw;
+            height: 100%;
+        }
+
+        footer{
+            height: 50px;
+            width: 100vw;
+            line-height: 50px;
+            font-weight: 100;
+            text-align: right;
+            font-size: 18px;
+        }
     </style>
 </head>
 <body>
@@ -92,8 +162,42 @@
     </div>
 
     <div class="drawer">
-        <a class="dl-button" href="./scripts/AdhocQueryPercentageCheck.sql" download>AdhocQueryPercentageCheck</a>
+
+        <!--Section Title-->
+        <div class="title">Crossiant</div>
+        <div class="subtitle">Tasty SQL Scripts</div>
+
+        <!--Script Boxes-->
+        
+        <!--Adhoc Workload 1-->
+        <div class="script-container">
+
+            <div class="subtitle">Get Adhoc Workload Percentage</div>
+            <div class="description">
+                This script calculates the adhoc workload for a SQL instance, based on the plan cache, and writes it to screen.</br> 
+                This is useful when determining whether to enable 'Optimize for AdHoc Workloads'.
+            </div>
+            <div class="button-container">
+                <a class="dl-button" href="./scripts/AdhocQueryPercentageCheck.sql" download>download</a>
+            </div>
+
+        </div>
+
+        <div class="script-container">
+
+            <div class="subtitle">Alternate Adhoc Workload Calculator</div>
+            <div class="description">
+                This script calculates the adhoc workload for a SQL instance based on the plan cache, and uses logic to make a recommendation.</br> 
+                This is useful when determining whether to enable 'Optimize for AdHoc Workloads'.
+            </div>
+            <div class="button-container">
+                <a class="dl-button" href="./scripts/AdhocQueryPercentageCheck2.sql" download>download</a>
+            </div>
+
+        </div>
     </div>
-    
+    <footer>
+        <span>&#129360;&nbsp; created by <a style="text-decoration: none; color: gold;" href="https://github.com/dark-coffee">dark-coffee</a>, 2020.</span><span style="margin-right: 30px;"></span>
+    </footer>
 </body>
 </html>
