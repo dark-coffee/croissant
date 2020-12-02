@@ -297,6 +297,7 @@
         <div class="subtitle">Tasty SQL Scripts</div>
 
         <!--Script Boxes-->
+        <div class="heading">Scripts</div>
         <!--Adhoc Workload 1-->
         <div class="script-container">
 
@@ -324,6 +325,32 @@
             </div>
 
         </div>
+
+
+        <!--Snippets-->
+        <div class="heading">Snippets</div>
+
+        <div class="snippet-container">
+            <p>set statistics io on</p>
+        </div>
+
+        <div class="snippet-container">
+            <p>set statistics time on</p>
+        </div>
+
+        <div class="snippet-container">
+            <p>SELECT sqlserver_start_time FROM sys.dm_os_sys_info;</p>
+        </div>
+
+        <div class="snippet-container">
+            <p>DBCC CHECKDB WITH ALL_ERRORMSGS, NO_INFOMSGS;</p>
+        </div>
+
+        <div class="snippet-container">
+            <p>SELECT value_data FROM sys.dm_server_registry WHERE value_name = 'CurrentVersion';</p>
+        </div>
+        
+        
     </div>
     <footer>
         <span>&#129360;&nbsp; created by <a style="text-decoration: none; color: var(--color2);" href="https://github.com/dark-coffee">dark-coffee</a>, 2020.</span><span style="margin-right: 30px;"></span>
