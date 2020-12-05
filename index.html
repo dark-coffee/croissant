@@ -213,7 +213,7 @@
 
             /* Margins & Padding */
             margin-left: auto;
-            margin-bottom: 50px;
+            margin-bottom: 30px;
             margin-right: auto;
 
             /* Background */
@@ -269,39 +269,69 @@
         }
 
         .heading{
+
+            /* Dimensions */
+            width: 200px;
+
             /* Margins & Padding */
-            margin-top: 100px;
-            margin-bottom: 20px;
+            margin-top: 70px;
+            margin-bottom: 25px;
             margin-left: 8vw;
 
+            /* Borders */
+            border-bottom: 1px solid var(--color2);
 
             /* Font & Text */
             font-size: 30px;
             font-weight: 100;
+            line-height: 40px;
+
         }
         
+
         .snippet-container{
+            background-color: hotpink;
+        }
+
+        .snippet-description{
+            /* Dimensions */
+            width: 85vw;
+
+            /* Margins & Padding */
+            margin-left: auto;
+            margin-bottom:7px;
+            margin-right: auto;
+
+            /* Font & Text */
+        }
+
+        .snippet-code{
 
             /* Position */
             position: relative;
 
-            /* Dimenstions */
-            height: auto;
-            width: 85vw;
+            /* Dimensions */
+            height: 40px;
+            width: 83vw;
 
             /* Margins & Padding */
             margin-left: auto;
             margin-bottom: 20px;
             margin-right: auto;
+            padding-left: 20px;
 
             /* Background */
-            background-color: rgb(174, 182, 190);
+            background-color: rgb(48, 49, 51);
             
             /* Borders */
-            border: 1px solid rgb(246,248,250);
+            border: 1px solid rgb(48, 49, 51);
             border-radius: 5px;
 
-            color: #0b0b0b;
+            /* Font & Text */
+            font-family: monospace;
+            line-height: 40px;
+            font-size: 15px;
+            font-weight: 100;
 
         }
 
@@ -348,6 +378,7 @@
 
         </div>
 
+
         <!--Adhoc Workload 2-->
         <div class="script-container">
 
@@ -367,23 +398,28 @@
         <div class="heading">Snippets</div>
 
         <div class="snippet-container">
-            <p>set statistics io on</p>
+            <div class="snippet-description">Display Query Disk Statistics</div>
+            <div class="snippet-code">SET STATISTICS IO ON</div>
         </div>
 
         <div class="snippet-container">
-            <p>set statistics time on</p>
+            <div class="snippet-description">Display Query Time Statistics</div>
+            <div class="snippet-code">SET STATISTICS TIME ON</div>
         </div>
 
         <div class="snippet-container">
-            <p>SELECT sqlserver_start_time FROM sys.dm_os_sys_info;</p>
+            <div class="snippet-description">Get Instance Start Time</div>
+            <div class="snippet-code">SELECT sqlserver_start_time FROM sys.dm_os_sys_info;</div>
         </div>
 
         <div class="snippet-container">
-            <p>DBCC CHECKDB WITH ALL_ERRORMSGS, NO_INFOMSGS;</p>
+            <div class="snippet-description">Database Integrity Check - Error Messages Only</div>
+            <div class="snippet-code">DBCC CHECKDB WITH ALL_ERRORMSGS, NO_INFOMSGS;</div>
         </div>
 
         <div class="snippet-container">
-            <p>SELECT value_data FROM sys.dm_server_registry WHERE value_name = 'CurrentVersion';</p>
+            <div class="snippet-description">Get Instance Version Number</div>
+            <div class="snippet-code">SELECT value_data FROM sys.dm_server_registry WHERE value_name = 'CurrentVersion';</div>
         </div>
         
         
