@@ -40,6 +40,7 @@
                 /* Background */
                 --background: #ffffff;
                 --background2: #eeeeee;
+                --backgroundCode: rgb(246, 248, 250);
 
                 /* Shadow */
                 --shadow: rgba(0,0,0,0.5);
@@ -56,6 +57,7 @@
                 /* Background */
                 --background: #0b0b0b;
                 --background2: #1b1b1b;
+                --backgroundCode: rgb(48, 49, 51);
 
                 /* Shadow */
                 --shadow: rgba(0,0,0,0.1);
@@ -275,11 +277,11 @@
 
             /* Margins & Padding */
             margin-top: 70px;
-            margin-bottom: 25px;
+            margin-bottom: 0px;
             margin-left: 8vw;
 
             /* Borders */
-            border-bottom: 1px solid var(--color2);
+            border-bottom: 1.2px solid var(--color2);
 
             /* Font & Text */
             font-size: 30px;
@@ -287,12 +289,23 @@
             line-height: 40px;
 
         }
+
+        .section-description{
+            /* Dimensions */
+            width: 80vw;
+
+            /* Margins & Padding */
+            margin-top: 0px;
+            margin-bottom: 25px;
+            margin-left: 8vw;
+        }
         
 
         .snippet-container{
             margin-top: 10px;
             margin-bottom: 35px;
         }
+
 
         .snippet-description{
             /* Dimensions */
@@ -308,13 +321,14 @@
             font-weight: bold;
         }
 
+
         .snippet-code{
 
             /* Position */
             position: relative;
 
             /* Dimensions */
-            height: 40px;
+            height: 42px;
             width: 83vw;
 
             /* Margins & Padding */
@@ -324,18 +338,21 @@
             padding-left: 20px;
 
             /* Background */
-            background-color: rgb(48, 49, 51);
+            background-color: var(--backgroundCode);
             
             /* Borders */
-            border: 1px solid rgb(48, 49, 51);
+            border: 1px solid var(--backgroundCode);
             border-radius: 5px;
 
             /* Font & Text */
             font-family: monospace;
-            line-height: 40px;
+            line-height: 42px;
             font-size: 15px;
             font-weight: 100;
 
+            cursor:text;
+            user-select: text;
+            -webkit-user-select: text;
         }
 
         /* Footer */
@@ -367,6 +384,8 @@
 
         <!--Script Boxes-->
         <div class="heading">Scripts</div>
+        <div class="section-description">I should probably put something here.</div>
+
         <!--Adhoc Workload 1-->
         <div class="script-container">
 
@@ -399,7 +418,7 @@
 
         <!--Snippets-->
         <div class="heading">Snippets</div>
-
+        <div class="section-description">I should probably put something here.</div>
         <div class="snippet-container">
             <div class="snippet-description">Display Query Disk Statistics</div>
             <div class="snippet-code">SET STATISTICS IO ON</div>
