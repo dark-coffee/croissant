@@ -56,10 +56,7 @@ html{
 }
 /* Mobile */
 @media only screen and (max-width: 768px) {
-    .script-container{
-        width: 100%;
-    }
-    .snippet-container{
+    .script-container, .snippet-container, .snippet-code{
         width: 100%;
     }
   }
