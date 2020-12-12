@@ -55,9 +55,11 @@ html{
     }
 }
 /* Mobile */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
     .script-container, .snippet-container, .snippet-code{
         width: 100%;
+        margin-left: 0;
+        margin-right: 0;
     }
   }
 
