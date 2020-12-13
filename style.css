@@ -54,6 +54,7 @@ html{
         --shadow: rgba(0,0,0,0.1);
     }
 }
+
 /* Mobile */
 @media only screen and (width: 980px) {
     
@@ -74,6 +75,7 @@ html{
 
         /* Font & Text */
         text-align: center;
+        font-size: 100px;
     
     }
     
