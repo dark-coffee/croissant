@@ -57,7 +57,12 @@ html{
 
 /* Mobile */
 @media only screen and (width: 980px) {
+    html{
     
+        /* Hide Any Overflow */
+        overflow-x: hidden;
+    }
+
     .script-container, .snippet-container, .snippet-code{
         width: 100%;
         margin-left: 0;
