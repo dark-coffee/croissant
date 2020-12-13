@@ -57,9 +57,18 @@ html{
 /* Mobile */
 @media only screen and (width: 980px) {
     .script-container, .snippet-container, .snippet-code{
-        width: 100%;
-        margin-left: 0;
-        margin-right: 0;
+        width: 100vw;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .title, .subtitle{
+        /* Dimenstions */
+        width: 100vw;
+
+        /* Margins & Padding */
+        margin-left: 0px;
+    
     }
     
     footer {
