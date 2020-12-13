@@ -56,18 +56,21 @@ html{
 }
 /* Mobile */
 @media only screen and (width: 980px) {
+    
     .script-container, .snippet-container, .snippet-code{
-        width: 100vw;
-        margin-left: 0px;
+        width: 100%;
+        margin-left: 0;
         margin-right: 0px;
     }
 
     .title, .subtitle{
         /* Dimenstions */
-        width: 100vw;
+        width: 100%;
+        height: 200px;
 
         /* Margins & Padding */
-        margin-left: 0px;
+        margin-left: 0;
+        padding: 0;
 
         /* Font & Text */
         text-align: center;
