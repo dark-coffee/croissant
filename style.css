@@ -57,35 +57,165 @@ html{
 
 
 /* Mobile */
-@media only screen and (max-width: 414px) {
-    
-    .button-container{
+@media only screen and (width: 414px) {
 
-        /* Positions */
-        position: absolute;
-        bottom: 0px;
-        left: 0px;
+    .dl-button{
+        /* Dimensions */
+        height: 50px;
+        width: 200px;
+    
+        /* Margins & Padding */
+        margin-top: 12.5px;
+        margin-left: auto;
+        margin-right: auto;
+
+        /* Display */
+        display: block;
+        
+        /* Background */
+        background-color: #007BFF;
+        border-radius:5px;
+        cursor:pointer;
+
+        /* Font & Text */
+        color:#ffffff;
+        font-size:20px;
+        font-weight: 200;
+        text-decoration:none;
+        line-height: 50px;
+        text-align: center;
+
+        /* Animation */
+        -webkit-transition: background-color 1.0s;
+        transition: background-color 1.0s;
+
+    }
+
+
+    .dl-button:hover{
 
         /* Background */
-        background-color: orange;
-    
-        /* Dimensions */
-        height: 200px;
-        width: 100vw;
-        
+        background-color: #0069D9;
+
+        /* Animation */
+        -webkit-transition: background-color 0.5s;
+        transition: background-color 0.5s;
+
     }
 
     .description{
 
         /* Dimensions */
-        width:100%;
+        min-height:60%;
+        max-height: fit-content;
+        width: 90%;
+    
+        /* Margins & Padding */
+        margin-top: 15px;
+        margin-left: 20px;
+        padding-bottom: 15px;
+        
+        /* Font & Text */
+        word-wrap: normal;
 
+        /* Display */
+        display: block;
+    }
+
+    .button-container{
+        /* Dimensions */
+        height: 75px;
+        width: 100%;
+        
+        /* Display */
+        display: block;
     }
     
 }
 
 
 /* Desktop */
+@media only screen and (min-width: 415px) {
+
+    /* Download Buttons */
+    .dl-button{
+
+        /* Dimensions */
+        height: 50px;
+        width: 200px;
+
+        /* Margins & Padding */
+        margin-top: 7.5vh;
+        margin-left: auto;
+        margin-right: auto;
+
+        /* Display */
+        display: block;
+        
+        /* Background */
+        background-color: #007BFF;
+        border-radius:5px;
+        cursor:pointer;
+
+        /* Font & Text */
+        color:#ffffff;
+        font-size:20px;
+        font-weight: 200;
+        text-decoration:none;
+        line-height: 50px;
+        text-align: center;
+
+        /* Animation */
+        -webkit-transition: background-color 1.0s;
+        transition: background-color 1.0s;
+
+    }
+
+
+    .dl-button:hover{
+
+        /* Background */
+        background-color: #0069D9;
+
+        /* Animation */
+        -webkit-transition: background-color 0.5s;
+        transition: background-color 0.5s;
+
+    }
+
+    .description{
+
+        /* Dimensions */
+        min-height:60%;
+        max-height: fit-content;
+        width:54vw;
+    
+        /* Margins & Padding */
+        margin-top: 15px;
+        margin-left: 20px;
+        padding-bottom: 15px;
+        
+        /* Font & Text */
+        word-wrap: normal;
+        
+    }
+
+    .button-container{
+
+        /* Positions */
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    
+        /* Dimensions */
+        height: 100%;
+        width: 30vw;
+        
+    }
+}
+
+
+/* Both Mobile & Desktop */
 /* Body */
 body{
 
@@ -148,53 +278,6 @@ body{
 }
 
 
-/* Download Buttons */
-.dl-button{
-
-    /* Dimensions */
-    height: 50px;
-    width: 200px;
-
-    /* Margins & Padding */
-    margin-top: 7.5vh;
-    margin-left: auto;
-    margin-right: auto;
-
-    /* Display */
-    display: block;
-    
-    /* Background */
-    background-color: #007BFF;
-    border-radius:5px;
-    cursor:pointer;
-
-    /* Font & Text */
-    color:#ffffff;
-    font-size:20px;
-    font-weight: 200;
-    text-decoration:none;
-    line-height: 50px;
-    text-align: center;
-
-    /* Animation */
-    -webkit-transition: background-color 1.0s;
-    transition: background-color 1.0s;
-
-}
-
-
-.dl-button:hover{
-
-    /* Background */
-    background-color: #0069D9;
-
-    /* Animation */
-    -webkit-transition: background-color 0.5s;
-    transition: background-color 0.5s;
-
-}
-
-
 /* Text Elements */
 .title{
 
@@ -205,6 +288,8 @@ body{
     font-size: 50px;
     font-weight: 100;
 
+    /* Margins & Padding */
+    margin-left: 20px;
 }
 
 
@@ -214,14 +299,8 @@ body{
     font-size: 25px;
     font-weight: 300;
 
-}
-
-
-.title, .subtitle{
-
     /* Margins & Padding */
     margin-left: 20px;
-
 }
 
 
@@ -261,36 +340,6 @@ body{
 
 }
 
-
-.description{
-
-    /* Dimensions */
-    height:60%;
-    width:54vw;
-
-    /* Margins & Padding */
-    margin-top: 15px;
-    margin-left: 20px;
-    padding-bottom: 15px;
-    
-    /* Font & Text */
-    word-wrap: normal;
-    
-}
-
-
-.button-container{
-
-    /* Positions */
-    position: absolute;
-    top: 0px;
-    right: 0px;
-
-    /* Dimensions */
-    height: 100%;
-    width: 30vw;
-    
-}
 
 .heading{
 
