@@ -70,6 +70,13 @@ html{
         width: 100vw;
         
     }
+
+    .description{
+
+        /* Dimensions */
+        width:100%;
+        
+    }
     
 }
 
