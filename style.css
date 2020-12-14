@@ -59,6 +59,15 @@ html{
 /* Mobile */
 @media only screen and (width: 414px) {
 
+    /* Croissant */
+    .croissant{
+        /* Margins & Padding */
+        margin-top: 30vh;
+        margin-left: auto;
+        margin-bottom: 10vh;
+        margin-right: auto;
+    }
+
     .dl-button{
         /* Dimensions */
         height: 50px;
@@ -136,6 +145,13 @@ html{
 
 /* Desktop */
 @media only screen and (min-width: 415px) {
+    /* Croissant */
+    .croissant{
+        /* Margins & Padding */
+        margin-top:40vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     /* Download Buttons */
     .dl-button{
@@ -212,6 +228,7 @@ html{
         width: 30vw;
         
     }
+
 }
 
 
@@ -240,11 +257,6 @@ body{
     /* Dimensions */
     height: 200px;
     width: 200px;
-
-    /* Margins & Padding */
-    margin-top:40vh;
-    margin-left: auto;
-    margin-right: auto;
 
     /* Background */
     background-image: url('./croissant.png');
