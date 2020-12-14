@@ -56,12 +56,21 @@ html{
 }
 
 /* Mobile */
-@media only screen and (width: 417px) {
+@media only screen and (width: 414px) {
     
-    footer {
+    .button-container{
 
-            background-color: gold;
-        }
+        /* Positions */
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+    
+        /* Dimensions */
+        height: 200px;
+        width: 100vw;
+        
+    }
+    
 }
 
 
