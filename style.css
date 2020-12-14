@@ -55,8 +55,9 @@ html{
     }
 }
 
+
 /* Mobile */
-@media only screen and (width: 414px) {
+@media only screen and (max-width: 414px) {
     
     .button-container{
 
@@ -64,6 +65,9 @@ html{
         position: absolute;
         bottom: 0px;
         left: 0px;
+
+        /* Background */
+        background-color: orange;
     
         /* Dimensions */
         height: 200px;
