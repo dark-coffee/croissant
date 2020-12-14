@@ -358,8 +358,12 @@ body{
     -webkit-user-select: text;
 }
 
+.debug-bar{
+    background-color: var(--color2);
+}
+
 /* Footer */
-footer{
+footer, .debug-bar{
 
     /* Dimenstions */
     height: 50px;
