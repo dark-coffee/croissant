@@ -211,7 +211,8 @@ body{
     position: relative;
 
     /* Dimenstions */
-    height: 20vh;
+    min-height: 20vh;
+    max-height: fit-content;
     width: 85vw;
 
     /* Margins & Padding */
@@ -329,7 +330,8 @@ body{
     position: relative;
 
     /* Dimensions */
-    height: 42px;
+    min-height: 42px;
+    max-height: fit-content;
     width: 83vw;
 
     /* Margins & Padding */
