@@ -75,7 +75,7 @@ html{
 
         /* Dimensions */
         width:100%;
-        
+
     }
     
 }
@@ -374,14 +374,28 @@ body{
     -webkit-user-select: text;
 }
 
+
+/* Debug Bar */
 .debug-bar{
+    /* Dimensions */
+    height: 30px;
+    width: 100vw;
+
+    /* Background */
     background-color: var(--color2);
+
+    /* Font & Text */
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: 100;
+    text-align: right;
 }
 
-/* Footer */
-footer, .debug-bar{
 
-    /* Dimenstions */
+/* Footer */
+footer{
+
+    /* Dimensions */
     height: 50px;
     width: 100vw;
 
