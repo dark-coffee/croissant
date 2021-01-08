@@ -57,7 +57,7 @@ html{
 
 
 /* Mobile */
-@media only screen and (width: 414px) {
+@media only screen and (min-width: 414px) {
 
     /* Croissant */
     .croissant{
@@ -160,7 +160,7 @@ html{
 
 
 /* Desktop */
-@media only screen and (min-width: 415px) {
+@media only screen and (min-width: 771px) {
 
     /* Croissant */
     .croissant{
