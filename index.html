@@ -104,6 +104,11 @@
             <div class="snippet-description">sp_BlitzIndex, all databases, all indexes.</div>
             <div class="snippet-code">EXEC sp_BlitzIndex @GetAllDatabases = 1, @Mode = 2;</div>
         </div>
+
+        <div class="snippet-container">
+            <div class="snippet-description">sp_BlitzCache, queries with the most reads.</div>
+            <div class="snippet-code">EXEC sp_BlitzCache @SortOrder = 'reads';</div>
+        </div>
         
     </div>
 
