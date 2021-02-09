@@ -97,6 +97,11 @@
             <div class="snippet-description">Get Instance Bitness</div>
             <div class="snippet-code">SELECT SUBSTRING ((SELECT @@VERSION), CHARINDEX('x',(SELECT @@VERSION)),3) as 'InstanceBitness';</div>
         </div>
+
+        <div class="snippet-container">
+            <div class="snippet-description">Pull Configurations</div>
+            <div class="snippet-code">SELECT * FROM sys.configurations WHERE configuration_id IN (109, 518, 1538, 1539, 1543, 1544, 1579, 1581);</div>
+        </div>
         
 
         <div class="subtitle">Ozar Specific</div>
