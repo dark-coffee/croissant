@@ -1,0 +1,462 @@
+<!doctype html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body{
+            overflow-x: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .container{
+            height: 100vh;
+            width: 100vw;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            margin: 0;
+            padding: 0;
+            /*background: repeating-linear-gradient(-55deg,#222,#222 50px,#333 50px,#333 100px);*/
+            background-color: #fff;
+        }
+
+        .code-download{
+
+            /* Positions */
+            position: relative;
+
+            /* Dimensions */
+            height: 250px;
+            width: 600px;
+
+            /* Display */
+            display: block;
+
+            /* Margins & Padding */
+            margin-top: 20vh;
+            margin-left: auto;
+            margin-right: auto;
+
+            /* Borders */
+            border: 1px solid rgb(229,229,229);
+            border-radius: 15px;
+
+            /* Background */
+            background-color:white;
+
+        }
+
+        .code-title-area{
+
+            /* Positions */
+            position:absolute;
+            top: 0px;
+            left:0px;
+
+            /* Dimensions */
+            height: 50px;
+            width: 98.5%;
+
+            /* Margins & Padding */
+            padding-left: 1.5%;
+
+            /* Borders */
+            border-bottom: 1px solid rgb(229,229,229);
+
+            /* Font & Text */
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 65px;
+
+        }
+
+        .code-description-area{
+
+            /* Positions */
+            position: absolute;
+            top: 50px;
+            left: 0px;
+
+            /* Margins & Padding */
+            padding-left: 20px;
+            padding-right: 20px;
+
+            /* Font & Text */
+            font-weight: 200;
+            text-align: justify;
+
+        }
+
+        .code-version-tag-area{
+            
+            /* Positions */
+            position:absolute;
+            bottom: 0px;
+            left:0px;
+
+            /* Dimensions */
+            height: 50px;
+            width: 22%;
+
+            /* Display */
+            display: inline-block;
+
+            /* Margins & Padding */
+            margin-left: 0px;
+            margin-right: 0px;
+
+            /* Borders */
+            border-top: 1px solid rgb(229,229,229);
+
+            /* Font & Text */
+            font-size: 14px;
+            font-weight: lighter;
+            line-height: 50px;
+            color: rgb(119,119,119);
+            
+        }
+
+        .code-download-area{
+
+            /* Positions */
+            position:absolute;
+            bottom: 0px;
+            right:0px;
+
+            /* Dimensions */
+            height: 50px;
+            width: 100%;
+            
+            /* Borders */
+            border-top: 1px solid rgb(229,229,229);
+            border-bottom-left-radius: 13px;
+            border-bottom-right-radius: 13px;
+
+            /* Font & Text */
+            text-align: center;
+
+            /* Background */
+            background-color: rgba(229,229,229,0.5);           
+            
+        }
+
+        .code-download-button{
+
+            /* Dimensions */
+            height: 30px;
+            width: 140px;
+
+            /* Display */
+            display: inline-block;
+
+            /* Margins & Padding */
+            margin-top: 10px;
+            margin-left: auto;
+            margin-right: auto;
+
+            /* Borders */
+            border: 1px solid rgb(47,145,77);
+            border-radius: 7px;
+
+            /* Font & Text */
+            color: #fff;
+            line-height: 30px;
+            text-align: center;            
+            
+            /* Background */
+            background-color: rgb(50,164,85);
+
+            /* Modifiers */
+            user-select: none;
+            -webkit-user-select: none;
+            cursor: pointer;
+
+        }
+
+        .code-download-button:hover{
+
+            /* Background */
+            background-color: rgb(47,145,77);
+
+            /* Shadow */
+            box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+
+        }
+
+        .code-raw-tag-area{
+
+            /* Positions */
+            position:absolute;
+            bottom: 0px;
+            right:0px;
+
+            /* Dimensions */
+            height: 50px;
+            width: 22%;
+
+            /* Display */
+            display: inline-block;
+
+            /* Margins & Padding */
+            margin-left: 0px;
+            margin-right: 0px;
+
+            /* Borders */
+            border-top: 1px solid rgb(229,229,229);
+
+            /* Font & Text */
+            color: rgb(119,119,119);
+            font-size: 14px;
+            font-weight: lighter;
+            line-height: 50px;
+            text-align: right;
+
+        }
+
+        /* DARK STYLE */
+        .code-download-dark{
+
+            /* Positions */
+            position: relative;
+
+            /* Dimensions */
+            height: 250px;
+            width: 600px;
+
+            /* Display */
+            display: block;
+
+            /* Margins & Padding */
+            margin-top: 5vh;
+            margin-left: auto;
+            margin-right: auto;
+
+            /* Borders */
+            border: 1px solid rgb(55,62,71);
+            border-radius: 15px;
+
+            /* Font & Text */
+            color: #ffffff;
+
+            /* Background */
+            background-color: rgb(34,39,46);
+
+        }
+
+        .code-title-area-dark{
+
+            /* Positions */
+            position:absolute;
+            top: 0px;
+            left:0px;
+
+            /* Dimensions */
+            height: 50px;
+            width: 98.5%;
+
+            /* Margins & Padding */
+            padding-left: 1.5%;
+
+            /* Borders */
+            border-bottom: 1px solid rgb(55,62,71);
+
+            /* Font & Text */
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 65px;
+
+        }
+
+        .code-description-area-dark{
+
+            /* Positions */
+            position: absolute;
+            top: 50px;
+            left: 0px;
+
+            /* Margins & Padding */
+            padding-left: 20px;
+            padding-right: 20px;
+
+            /* Font & Text */
+            font-weight: 200;
+            text-align: justify;
+
+        }
+
+        .code-version-tag-area-dark{
+
+            /* Positions */
+            position:absolute;
+            bottom: 0px;
+            left:0px;
+
+            /* Dimensions */
+            height: 50px;
+            width: 22%;
+
+            /* Display */
+            display: inline-block;
+
+            /* Margins & Padding */
+            margin-left: 0px;
+            margin-right: 0px;
+
+            /* Borders */
+            border-top: 1px solid rgb(55,62,71);
+
+            /* Font & Text */
+            font-size: 14px;
+            font-weight: lighter;
+            line-height: 50px;
+            color: rgb(119,119,119);
+
+        }
+
+        .code-download-area-dark{
+
+            /* Positions */
+            position:absolute;
+            bottom: 0px;
+            right:0px;
+
+            /* Dimensions */
+            height: 50px;
+            width: 100%;
+
+            /* Borders */
+            border-top: 1px solid rgb(55,62,71);
+            border-bottom-left-radius: 13px;
+            border-bottom-right-radius: 13px;
+
+            /* Font & Text */
+            text-align: center;
+
+            /* Background */
+            background-color: rgba(55,62,71,0.5);           
+
+        }
+
+        .code-download-button-dark{
+
+            /* Dimensions */
+            height: 30px;
+            width: 140px;
+
+            /* Display */
+            display: inline-block;
+
+            /* Margins & Padding */
+            margin-top: 10px;
+            margin-left: auto;
+            margin-right: auto;
+
+            /* Borders */
+            border: 1px solid rgb(47,145,77);
+            border-radius: 7px;
+
+            /* Font & Text */
+            color: #fff;
+            line-height: 30px;
+            text-align: center;            
+
+            /* Background */
+            background-color: rgb(50,164,85);
+
+            /* Modifiers */
+            user-select: none;
+            -webkit-user-select: none;
+            cursor: pointer;
+
+        }
+
+        .code-download-button-dark:hover{
+
+            /* Background */
+            background-color: rgb(47,145,77);
+
+            /* Shadow */
+            box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+
+        }
+
+        .code-raw-tag-area-dark{
+
+            /* Positions */
+            position:absolute;
+            bottom: 0px;
+            right:0px;
+
+            /* Dimensions */
+            height: 50px;
+            width: 22%;
+
+            /* Display */
+            display: inline-block;
+
+            /* Margins & Padding */
+            margin-left: 0px;
+            margin-right: 0px;
+
+            /* Borders */
+            border-top: 1px solid rgb(55,62,71);
+
+            /* Font & Text */
+            color: rgb(119,119,119);
+            font-size: 14px;
+            font-weight: lighter;
+            line-height: 50px;
+            text-align: right;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="code-download">
+            <div class="code-title-area">SQL Server Quick Configure</div>
+            <div class="code-description-area">
+                <p>
+                    This script calculates the adhoc workload for a SQL instance based on the plan cache, and uses logic to make a recommendation.
+                </br>
+                </br>
+                    This is useful when determining whether to enable 'Optimize for AdHoc Workloads'.
+                </p>
+            </div>
+            <div class="code-version-tag-area"><span style="margin-left: 10px;"></span>version 1.0</div>
+            <div class="code-download-area">
+                <div class="code-download-button">
+                    <div class="code-download-image"></div>
+                    <div class="code-download-text">Download</div>
+                </div>
+            </div>
+            <div class="code-raw-tag-area">
+                view raw<span style="margin-right: 10px;"></span>
+            </div>
+        </div>
+
+        <!--Dark-->
+        <div class="code-download-dark">
+            <div class="code-title-area-dark">SQL Server Quick Configure</div>
+            <div class="code-description-area-dark">
+                <p>
+                    This script calculates the adhoc workload for a SQL instance based on the plan cache, and uses logic to make a recommendation.
+                </br>
+                </br>
+                    This is useful when determining whether to enable 'Optimize for AdHoc Workloads'.
+                </p>
+            </div>
+            <div class="code-version-tag-area-dark"><span style="margin-left: 10px;"></span>version 1.0</div>
+            <div class="code-download-area-dark">
+                <div class="code-download-button-dark">
+                    <div class="code-download-image-dark"></div>
+                    <div class="code-download-text-dark">Download</div>
+                </div>
+            </div>
+            <div class="code-raw-tag-area-dark">
+                view raw<span style="margin-right: 10px;"></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
