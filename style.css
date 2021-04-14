@@ -264,6 +264,9 @@ body{
 
     /* Background */
     background-color: var(--background);
+    background-image: url('./croissant.png');
+    background-size: 30px;
+    background-repeat: repeat;
     
     /* Font & Text */
     color: var(--color);
@@ -274,12 +277,6 @@ body{
 
 
 /* Main View Element */
-.pastry-box{
-    background-image: url('./croissant.png');
-    background-size: 30px;
-    background-repeat: repeat;
-}
-
 .croissant{
 
     /* Dimensions */
@@ -287,7 +284,7 @@ body{
     width: 200px;
 
     /* Background */
-    background-image: url('./croissant.png');
+    /*background-image: url('./croissant.png');*/
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -493,5 +490,8 @@ footer{
     font-size: 18px;
     font-weight: 100;
     text-align: right;
+
+    /* Background */
+    background-color: var(--background);
     
 }
