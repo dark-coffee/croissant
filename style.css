@@ -274,6 +274,12 @@ body{
 
 
 /* Main View Element */
+.pastry-box{
+    background-image: url('./croissant.png');
+    background-size: 30px;
+    background-repeat: repeat;
+}
+
 .croissant{
 
     /* Dimensions */
