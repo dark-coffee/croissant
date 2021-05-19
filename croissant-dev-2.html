@@ -29,7 +29,6 @@
             height: auto;
             width: 100vw;
             /*background-color: orange;*/
-            background-color: #FFD700;
             user-select: none;
             -moz-user-select: none;
         }
@@ -48,12 +47,24 @@
             padding-left: 30px;
         }
 
-        .header-image{
+        .header-image, .header-image-2{
             height: 230px;
             width: 100vw;
             background-image: url('./croissant.png');
+            background-color: #FFD700;
             background-size: 46px;
             background-repeat: repeat;
+        }
+
+        .header-image-2{
+            height: 230px;
+            width: 100vw;
+            background-image: url('./assets/donut/donut.png');
+            background-color: pink;
+            background-size: 46px;
+            background-repeat: repeat;
+            margin-top: 75px;
+            display: none;
         }
 
         .header-image-text{
@@ -75,6 +86,15 @@
             text-align: center;
         }
 
+
+        /* training courses */
+        .
+
+
+        /********************/
+
+
+        /* footer section */
         .footer{
             /*height: 250px;
             width: 100vw;
@@ -133,6 +153,7 @@
             </div>
         </div>
 
+
         <!--main content area-->
         <div class="main-content">
 
@@ -175,6 +196,16 @@
                     </div>
                 </div>
 
+                <!--course 4: SQL Server Extended Events-->
+                <div class="training-course">
+                    <div class="training-course-title">SQL Server Extended Events</div>
+                    <div class="training-course-description"></div>
+                    <div class="training-course-downloads">
+                        <div class="training-course-download-slides">Slide Deck</div>
+                        <div class="training-course-download-script">Script Pack</div>
+                    </div>
+                </div>
+
             </div>
 
 
@@ -195,7 +226,13 @@
                     <div class="snippet-code">code</div>
                 </div>
             </div>
+
+            <div class="header-image-2">
+                <div class="header-image-text">Oracle SQL Stuff</div>
+            </div>
         </div>
+
+        
 
         <!--footer-->
         <div class="footer">
