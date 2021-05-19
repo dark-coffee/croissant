@@ -18,7 +18,7 @@
             color: #f8f8f8;
             cursor: default;
         }
-        
+
         .container{
             position: absolute;
             top: 0px;
@@ -66,7 +66,6 @@
             background-size: 46px;
             background-repeat: repeat;
             margin-top: 75px;
-            display: none;
         }
 
         .header-image-text{
@@ -88,6 +87,39 @@
             text-align: center;
         }
 
+        /********************/
+        /* divider          */
+        /********************/
+
+        .divider{
+            height: 3px;
+            width: 20vw;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #2b2b2b;
+            opacity: .5;
+            display: block;
+        }
+
+
+        /********************/
+
+
+        /********************/
+        /* section styling  */
+        /********************/
+
+        .content-section-heading{
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 50px;
+        }
+
+
+        /********************/
+
 
         /********************/
         /* training courses */
@@ -96,22 +128,39 @@
             border: 3px solid #3b3b3b;
 
             width: 60vw;
-            margin-top: 10px;
+            margin-top: 20px;
             margin-left: auto;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             margin-right: auto;
+
+            padding-top: 20px;
+            padding-left: 20px;
         }
 
         .training-course-title{
-            padding-top: 20px;
-            padding-left: 20px;
             text-align: left;
             font-weight: bold;
             font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .training-course-description{
+            
+        }
+
+        .training-course-image{
+            height:216px;
+            width:384px;
+            background-color: #2b2b2b;
+            margin-bottom: 5px;
         }
 
         .training-course-download-link{
             display: inline-flex;
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+
             color: gold;
             cursor: pointer;
         }
@@ -188,6 +237,8 @@
             <p>introduction</p>
             <p></p>
 
+            <div class="divider"></div>
+
             <!--section 1: training courses-->
             <div class="content-section">
                 <!--header-->
@@ -195,7 +246,7 @@
 
                 <!--course 1: T-SQL Basics-->
                 <div class="training-course">
-                    <div class="training-course-title">T-SQL Basics</div>
+                    <div class="training-course-title">Basic T-SQL Querying</div>
                     <div class="training-course-image"></div>
                     <div class="training-course-description"></div>
                     <div class="training-course-downloads">
@@ -206,7 +257,8 @@
 
                 <!--course 2: Advanced T-SQL-->
                 <div class="training-course">
-                    <div class="training-course-title">Advanced T-SQL</div>
+                    <div class="training-course-title">Advanced T-SQL Querying</div>
+                    <div class="training-course-image"></div>
                     <div class="training-course-description"></div>
                     <div class="training-course-downloads">
                         <div class="training-course-download-link">Slide Deck</div>
@@ -217,6 +269,7 @@
                 <!--course 3: SQL Server Configuration-->
                 <div class="training-course">
                     <div class="training-course-title">SQL Server Configuration</div>
+                    <div class="training-course-image"></div>
                     <div class="training-course-description"></div>
                     <div class="training-course-downloads">
                         <div class="training-course-download-link">Slide Deck</div>
@@ -227,6 +280,7 @@
                 <!--course 4: SQL Server Extended Events-->
                 <div class="training-course">
                     <div class="training-course-title">SQL Server Extended Events</div>
+                    <div class="training-course-image"></div>
                     <div class="training-course-description"></div>
                     <div class="training-course-downloads">
                         <div class="training-course-download-link">Slide Deck</div>
@@ -236,7 +290,7 @@
 
             </div>
 
-
+            <div class="divider"></div>
 
             <div class="content-section">
                 <div class="content-section-heading">Scripts</div>
@@ -245,7 +299,14 @@
                     <div class="script-description"></div>
                     <div class="script-download">download</div>
                 </div>
+                <div class="script">
+                    <div class="script-title">SQL Server Quick Configure</div>
+                    <div class="script-description"></div>
+                    <div class="script-download">download</div>
+                </div>
             </div>
+
+            <div class="divider"></div>
 
             <div class="content-section">
                 <div class="content-section-heading">Snippets</div>
@@ -265,7 +326,7 @@
         <!--footer-->
         <div class="footer">
             <div class="footer-element"><span style="color: gold;">&#183;</span></div>
-            <div class="footer-element">2021 dark-cofee</div>
+            <div class="footer-element">02021 dark-coffee</div>
             <div class="footer-element"><span style="color: gold;">&#183;</span></div>
             <div class="footer-element">powered by github pages</div>
             <div class="footer-element"><span style="color: gold;">&#183;</span></div>
