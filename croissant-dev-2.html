@@ -162,15 +162,27 @@
             margin-bottom: 5px;
         }
 
-        .training-course-description{
-            
-        }
-
         .training-course-image{
             height:216px;
             width:384px;
             background-color: #2b2b2b;
             margin-bottom: 5px;
+            display: inline-block;
+            vertical-align: bottom;
+        }
+
+        .training-course-description{
+            height:196px;
+            width:calc(60vw - 384px - 20px - 12px - 20px);
+            /*background-color: pink;*/
+            margin-left: 5px;
+            margin-bottom: 5px;
+            margin-right: 20px;
+            display: inline-block;
+            padding:10px;
+            text-align: justify;
+
+            vertical-align: bottom;
         }
 
         .training-course-download-link{
@@ -268,7 +280,12 @@
                 <div class="training-course">
                     <div class="training-course-title">Basic T-SQL Querying</div>
                     <div class="training-course-image"></div>
-                    <div class="training-course-description"></div>
+                    <div class="training-course-description">
+                        This course provides a basic overview of SQL Server, relational database theory, database building blocks and an introduction into the T-SQL language and its syntax.</br> 
+                        The T-SQL portion covers SELECT, FROM, WHERE, UPDATE, JOIN, and Transactions and their importance.</br>
+                        Additionally, this course also contains a practical exercise section, to familiarise trainees with the course content.</br></br>
+                        <b>Updated:</b> 2021
+                    </div>
                     <div class="training-course-downloads">
                         <div class="training-course-download-link">Slide Deck</div>
                         <div class="training-course-download-link">Script Pack</div>
