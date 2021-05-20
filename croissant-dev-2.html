@@ -95,11 +95,28 @@
         /* info styling     */
         /********************/
         .about-text{
-            width: 40vw;
-            text-align: left;
+            height: 100px;
+            width: calc(40vw - 100px);
+            text-align: justify;
+            vertical-align: text-top;
             margin-top: -40px;
             margin-left: auto;
             margin-right: auto;
+            padding-left: 10px;
+            display: inline-flex;
+            vertical-align: bottom;
+        }
+
+        .about-image{
+            height: 100px;
+            width: 100px;
+            margin-top: -40px;
+            border-radius: 50%;
+            background-image: url(./assets/profile.png);
+            background-size: contain;
+            display: inline-flex;
+            vertical-align: bottom;
+            
         }
 
         /********************/
@@ -274,7 +291,14 @@
 
             <div class="content-section">
                 <div class="content-section-heading">Hi there!</div>
-                <div class="about-text">information here</div>
+                <div class="about-image"></div>
+                <div class="about-text">
+                    <p>
+                        I'm Andy, author of this pastry-themed SQL repository.</br>
+                        Here you'll find a selection of SQL Server training courses that I've authored, downloadable script files and useful snippets of T-SQL</br>
+                        You can find me over at <a href="https://shadow.coffee">shadow.coffee</a></br>
+                    </p>
+                </div>
             </div>
 
             <div class="divider"></div>
@@ -304,11 +328,9 @@
                 <!--course 2: Advanced T-SQL-->
                 <div class="training-course">
                     <div class="training-course-title">Advanced T-SQL Querying</div>
-                    <div class="training-course-image" id="tc-advanced"></div>
+                    <div class="training-course-image" id="tc-placeholder"></div>
                     <div class="training-course-description">
-                    
-                        </br>
-                        <b>Updated:</b> 2021
+                        <span style="line-height: 196px;">This course is upcoming.</span>
                     </div>
                     <div class="training-course-downloads">
                         <div class="training-course-download-link">Slide Deck</div>
