@@ -159,7 +159,7 @@
             text-align: left;
             font-weight: bold;
             font-size: 20px;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
         }
 
         .training-course-image{
@@ -169,11 +169,12 @@
             margin-bottom: 5px;
             display: inline-block;
             vertical-align: bottom;
+            background-size: contain;
         }
 
         .training-course-description{
             height:196px;
-            width:calc(60vw - 384px - 20px - 12px - 20px);
+            width:calc(60vw - 384px - 20px - 12px - 18px);
             /*background-color: pink;*/
             margin-left: 5px;
             margin-bottom: 5px;
@@ -199,6 +200,9 @@
         .training-course-download-link :visited{
             color: goldenrod;
         }
+
+        /* Slides */
+        #tc-config{background-image: url(./resources/courses/sql_server_config/slide.jpeg);}
         /********************/
 
 
@@ -312,7 +316,7 @@
                 <!--course 3: SQL Server Configuration-->
                 <div class="training-course">
                     <div class="training-course-title">SQL Server Configuration</div>
-                    <div class="training-course-image"></div>
+                    <div class="training-course-image" id="tc-config"></div>
                     <div class="training-course-description">
 
                         </br>
