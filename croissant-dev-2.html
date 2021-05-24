@@ -34,7 +34,7 @@
         }
 
         a:active, a:visited{
-            color: goldenrod;
+            color: gold;
         }
 
         .container{
@@ -82,7 +82,7 @@
             display: inline-block;
             margin-left: 0px;
             margin-right: 10px;
-            width: 110px;
+            width: 90px;
             text-align: center;
             color: #f8f8f8;
             cursor: pointer;
@@ -284,8 +284,13 @@
             width: 100%;
         }
 
-        .training-course-download-link :visited{
-            color: goldenrod;
+        .training-course-download-link:hover{
+            background-color: rgb(238, 202, 0);
+            color:#0b0b0b;
+        }
+
+        .training-course-download-link:visited{
+            background-color: rgb(179, 179, 179);
         }
 
         /* Slides */
@@ -336,6 +341,40 @@
             margin-left: 0px;
             margin-right: 0px;
         }
+
+        .scrolltop{
+            height: 40px;
+            width: 40px;
+            background-color: #3b3b3b;
+            color: #b9b9b9;
+            position: fixed;
+            bottom: 60px;
+            right: -100px;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 300;
+            font-size:25px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+            transition: all 0.65s;
+        }
+
+        .scrolltop:hover{
+            background-color: rgb(211, 179, 0);
+            color: #0b0b0b;
+        }
+
+        .hide {
+            opacity:0;
+            right: -100px;
+        }
+
+        .show {
+            opacity:1;
+            right:30px;
+        }
     </style>
 </head>
 <body onresize="debugWindowSize();" onload="debugWindowSize();">
@@ -344,14 +383,14 @@
     <div class="container">
 
         <!--header-->
-        <div class="header">
+        <div class="header" id="header">
             <!--title bar-->
             <div class="header-top">
                 <div class="header-title">croissant</div>
                 <div class="header-nav">
-                    <div class="nav-link">training</div>
-                    <div class="nav-link">scripts</div>
-                    <div class="nav-link">snippets</div>
+                    <div class="nav-link" onclick="scrollTraining();">training</div>
+                    <div class="nav-link" onclick="scrollScripts();">scripts</div>
+                    <div class="nav-link" onclick="scrollSnippets();">snippets</div>
                 </div>
             </div>
             <!--header image & text-->
@@ -381,7 +420,7 @@
             <!--section 1: training courses-->
             <div class="content-section">
                 <!--header-->
-                <div class="content-section-heading">Training Courses</div>
+                <div class="content-section-heading" id="training">Training Courses</div>
 
                 <!--course 1: T-SQL Basics-->
                 <div class="training-course">
@@ -447,7 +486,7 @@
             <div class="divider"></div>
 
             <div class="content-section">
-                <div class="content-section-heading">Scripts</div>
+                <div class="content-section-heading"  id="scripts">Scripts</div>
                 <div class="script">
                     <div class="script-title">Ad Hoc Workload Calculator</div>
                     <div class="script-description"></div>
@@ -462,7 +501,7 @@
 
             <div class="divider"></div>
 
-            <div class="content-section">
+            <div class="content-section"  id="snippets">
                 <div class="content-section-heading">Snippets</div>
                 <div class="snippet">
                     <div class="snippet-title">Show Execution Statistics</div>
@@ -489,6 +528,10 @@
             <div class="footer-element"><span style="color: gold;">&#183;</span></div>
         </div>
 
+
+        <!--scroll to top-->
+        <div class="scrolltop" id="scrolltop" onclick="scrollHeader();">&uarr;</div>
+
         <!--javascript-->
         <script>
             //Debug: Window Size
@@ -503,6 +546,39 @@
                 debugWindowDisplay.innerHTML = debugWindowWidth + " x " + debugWindowHeight;
     
             };
+
+            function scrollTraining () {
+                var element = document.getElementById("training");
+                element.scrollIntoView({behavior: "smooth", block: "start"});
+            }
+
+            function scrollScripts () {
+                var element = document.getElementById("scripts");
+                element.scrollIntoView({behavior: "smooth", block: "start"});
+            }
+
+            function scrollSnippets () {
+                var element = document.getElementById("snippets");
+                element.scrollIntoView({behavior: "smooth", block: "start"});
+            }
+
+            function scrollHeader () {
+                var element = document.getElementById("header");
+                element.scrollIntoView({behavior: "smooth", block: "start"});
+            }
+
+            myID = document.getElementById("scrolltop");
+
+            var showScrollHeader = function () {
+                var y = window.scrollY;
+                if (y >= 300) {
+                    myID.className = "scrolltop show"
+                } else {
+                    myID.className = "scrolltop hide"
+                }
+            };
+
+            window.addEventListener("scroll", showScrollHeader);
         </script>
     </div>
 </body>
