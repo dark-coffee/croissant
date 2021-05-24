@@ -296,14 +296,26 @@
             width: 100%;
         }
 
+        .training-course-download-link:visited{
+            background-color: rgb(179, 179, 179);
+        }
+
         .training-course-download-link:hover{
             background-color: rgb(238, 202, 0);
             color:#0b0b0b;
         }
 
-        .training-course-download-link:visited{
-            background-color: rgb(179, 179, 179);
+        .training-course-download-link-disabled{
+            background-color: #b9b9b9;
+            width: 100%;
+            color: #0b0b0b;
+            cursor: not-allowed;
         }
+        .training-course-download-link-disabled:hover{
+            color: #0b0b0b;
+        }
+
+        
 
         /* Slides */
         #tc-basic{background-image: url(./resources/courses/tsql_basics/slide.jpg);}
@@ -486,8 +498,8 @@
                         <span style="line-height: 196px;">This course is upcoming.</span>
                     </div>
                     <div class="training-course-downloads">
-                        <!--<div class="training-course-download-linkbox"><a class="training-course-download-link">Slide Deck</a></div>
-                        <div class="training-course-download-linkbox"><a class="training-course-download-link">Script Pack</a></div>-->
+                        <div class="training-course-download-linkbox"><a class="training-course-download-link-disabled">Slide Deck</a></div>
+                        <div class="training-course-download-linkbox"><a class="training-course-download-link-disabled">Script Pack</a></div>
                     </div>
                 </div>
 
@@ -515,8 +527,8 @@
                         <span style="line-height: 196px;">This course is upcoming.</span>
                     </div>
                     <div class="training-course-downloads">
-                        <!--<div class="training-course-download-linkbox"><a class="training-course-download-link">Slide Deck</a></div>
-                        <div class="training-course-download-linkbox"><a class="training-course-download-link">Script Pack</a></div>-->
+                        <div class="training-course-download-linkbox"><a class="training-course-download-link-disabled">Slide Deck</a></div>
+                        <div class="training-course-download-linkbox"><a class="training-course-download-link-disabled">Script Pack</a></div>
                     </div>
                 </div>
 
