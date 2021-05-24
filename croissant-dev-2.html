@@ -363,6 +363,7 @@
 
         .script-description{
             text-align: justify;
+            font-weight: 300;
         }
 
         .script-download{
@@ -459,6 +460,78 @@
             opacity:1;
             right:30px;
         }
+
+        /******************/
+        /*MOBILE CSS EDITS*/
+        /******************/
+        /* Mobile */
+        @media only screen and (min-width: 414px) {
+            .main-content{
+                padding-top: 50px;
+            }
+
+            .header-image-text{
+                line-height: 70px;
+                font-size: 50px;
+                padding-top: 38px;
+            }
+
+            .header-nav{
+                display: none;
+            }
+
+            .about-image{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: -30px;
+            }
+
+            .about-text{
+                display: block;
+                width: 80vw;
+                margin-top: 10px;
+                margin-bottom: 100px;
+                font-weight: 200;
+            }
+
+            .training-course, .script{
+                width: 90vw;
+                padding-left: 0;
+                padding-right: 0;
+                height: fit-content;
+            }
+            .training-course-image{
+                margin:0;
+                min-width: 100%;
+                width: 100%;
+            }
+            .training-course-description, .script-description{
+                min-width: calc(100% - 20px);
+                width: calc(100% - 20px);
+                padding: 10px;
+                text-align: justify;
+                word-wrap: break-word;
+                display: block;
+                min-height: fit-content;
+                height: fit-content;
+                margin: 0px;
+                margin-top: 10px;
+            }
+            .training-course-downloads{
+                margin-bottom: 20px;
+            }
+            .training-course-download-linkbox, .script-download{
+                width: 90%;
+                margin-top: 10px;
+                margin-bottom: 0px;
+            }
+            .script-download{
+                display: block;
+                margin-bottom: 20px;
+            }
+        }
+        
     </style>
 </head>
 <body onresize="debugWindowSize();" onload="debugWindowSize();">
@@ -610,7 +683,7 @@
 
         <!--footer-->
         <div class="footer" style="margin-bottom: -10vh; background-color: rgba(29,30,32,1); color: #3b3b3b;">
-            <span style="color: gold;">&#183;</span> shh, this is a secret debug footer &#128521; this window is:  <span id="debug">1440 x 821</span> <span style="color: gold;">&#183;</span>
+            <span style="color: gold;">&#183;</span> shh, this is a secret debug footer <span style="color: gold;">&#183;</span> this window is:  <span id="debug">1440 x 821</span> <span style="color: gold;">&#183;</span>
         </div>
         <div class="footer">
             <div class="footer-element"><span style="color: gold;">&#183;</span></div>
