@@ -574,9 +574,9 @@
                 <div class="script">
                     <div class="script-title">Ad Hoc Workload Calculator</div>
                     <div class="script-description">
-                        This script determines what percentage of the workload performed by the SQL Server is Ad Hoc.</br> 
-                        The returned value is useful when determining whether to enable 'Optimize for Ad Hoc Workloads' when assessing performance.</br>
-                        The <span style="color: goldenrod;">sys.configuration</span> id for this value is: <span style="font-weight: 500;">1581</span>.
+                        This script determines what percentage of the workload performed by the SQL Server Instance is "Ad Hoc".</br> 
+                        The returned value is useful when determining whether to enable 'Optimize for Ad Hoc Workloads' when assessing performance. Note that the instance should be online for at least ~1 month for this value to be most accurate.</br>
+                        The <span style="color: goldenrod;">sys.configurations</span> id for this value is: <span style="font-weight: 500;">1581</span>.
                     </div>
                     <div class="script-download">download</div>
                 </div>
@@ -594,6 +594,10 @@
                 <div class="snippet">
                     <div class="snippet-title">Show Execution Statistics</div>
                     <div class="snippet-code">STATISTICS TIME, IO ON;</div>
+                </div>
+                <div class="snippet">
+                    <div class="snippet-title">Brent Ozar: sp_BlitzIndex - Columnstore Only</div>
+                    <div class="snippet-code">sp_BlitzIndex @TableName = '<table>', @ShowColumnstoreOnly = 1;</div>
                 </div>
             </div>
 
@@ -617,8 +621,11 @@
         </div>
 
 
+
         <!--scroll to top-->
         <div class="scrolltop" id="scrolltop" onclick="scrollHeader();">&uarr;</div>
+
+
 
         <!--javascript-->
         <script>
