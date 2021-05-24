@@ -338,7 +338,7 @@
         }
     </style>
 </head>
-<body>
+<body onresize="debugWindowSize();" onload="debugWindowSize();">
 
     <!--content wrapper-->
     <div class="container">
@@ -489,6 +489,21 @@
             <div class="footer-element"><span style="color: gold;">&#183;</span></div>
         </div>
 
+        <!--javascript-->
+        <script>
+            //Debug: Window Size
+            function debugWindowSize () {
+    
+                //Define Variables
+                var debugWindowWidth = window.innerWidth;
+                var debugWindowHeight = window.innerHeight;
+                var debugWindowDisplay = document.getElementById("debug");
+    
+                //Write Size to Screen
+                debugWindowDisplay.innerHTML = debugWindowWidth + " x " + debugWindowHeight;
+    
+            };
+        </script>
     </div>
 </body>
 </html>
