@@ -352,6 +352,35 @@
             text-align: center;
         }
 
+        .script-title{
+            text-align: left;
+            font-weight: 500;
+            font-size: 22px;
+            margin-bottom: 15px;
+            text-align: left;
+            margin-left: 5px;
+        }
+
+        .script-description{
+            text-align: justify;
+        }
+
+        .script-download{
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 30%;
+
+            text-align: center;
+            height: 35px;
+            line-height: 35px;
+            background-color: gold;
+            color: #0b0b0b;
+            
+            cursor: pointer;
+        }
 
         /********************/
 
@@ -544,7 +573,11 @@
                 <div class="content-section-heading"  id="scripts">Scripts</div>
                 <div class="script">
                     <div class="script-title">Ad Hoc Workload Calculator</div>
-                    <div class="script-description"></div>
+                    <div class="script-description">
+                        This script determines what percentage of the workload performed by the SQL Server is Ad Hoc.</br> 
+                        The returned value is useful when determining whether to enable 'Optimize for Ad Hoc Workloads' when assessing performance.</br>
+                        The <span style="color: goldenrod;">sys.configuration</span> id for this value is: <span style="font-weight: 500;">1581</span>.
+                    </div>
                     <div class="script-download">download</div>
                 </div>
                 <div class="script">
