@@ -7,13 +7,17 @@
     <link rel="shortcut icon" href="./favicon.ico"/>
     <link rel="apple-touch-icon" href="./apple-touch-icon.png"/>
 
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600&display=swap" rel="stylesheet">
+
     <!--css-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         
         body{
             overflow-x: hidden;
-            font-family: 'Avenir', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: 'Montserrat', 'Avenir', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             background-color: rgba(29,30,32,1);
             color: #f8f8f8;
             cursor: default;
@@ -22,13 +26,14 @@
         a{
             color: gold;
             text-decoration: none;
+            margin: 0;
         }
 
-        a :hover {
+        a:hover {
             color: #FFD700;
         }
 
-        a :active, a :visited{
+        a:active, a:visited{
             color: goldenrod;
         }
 
@@ -60,6 +65,32 @@
             font-size: 35px;
             line-height: 90px;
             padding-left: 30px;
+            font-weight: 100;
+            width: 20%; 
+        }
+
+        .header-nav{
+            height: 90px;
+            width: auto;
+            position: absolute;
+            top: 0px;
+            right:30px;
+            line-height: 90px;
+        }
+
+        .nav-link{
+            display: inline-block;
+            margin-left: 0px;
+            margin-right: 10px;
+            width: 110px;
+            text-align: center;
+            color: #f8f8f8;
+            cursor: pointer;
+            font-weight: 200;
+        }
+
+        .nav-link:hover{
+            color: gold;
         }
 
         .header-image, .header-image-2{
@@ -88,7 +119,7 @@
             background: rgba(0,0,0,0.25);
             text-align: center;
             line-height: 230px;
-            font-weight: bolder;
+            font-weight: 700;
             font-size: 60px;
             color: #f8f8f8;
         }
@@ -144,7 +175,7 @@
         .divider{
             height: 3px;
             width: 20vw;
-            margin-top: 50px;
+            margin-top: 60px;
             margin-bottom: 50px;
             margin-left: auto;
             margin-right: auto;
@@ -180,11 +211,14 @@
             width: 60vw;
             margin-top: 20px;
             margin-left: auto;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             margin-right: auto;
 
             padding-top: 20px;
             padding-left: 20px;
+            padding-right: 20px;
+
+            text-align: center;
         }
 
         .training-course-title{
@@ -192,41 +226,62 @@
             font-weight: bold;
             font-size: 22px;
             margin-bottom: 15px;
+            text-align: left;
+            margin-left: 5px;
         }
 
         .training-course-image{
-            height:216px;
-            width:384px;
+            min-height: 216px;
+            min-width:384px;
+            height: auto;
+            object-fit: cover;
+            
+            width: 48.7%;
             background-color: #2b2b2b;
+            background-size: cover;
             margin-bottom: 5px;
             display: inline-block;
             vertical-align: bottom;
-            background-size: contain;
+            margin-left: 0px;
+            margin-right: 5px;
         }
 
         .training-course-description{
             height:196px;
-            width:calc(60vw - 384px - 20px - 12px - 18px);
-            /*background-color: pink;*/
+            /*width:calc(60vw - 384px - 20px - 12px - 18px - 5px);*/
+            width: calc(48.6% - 20px);
             margin-left: 5px;
             margin-bottom: 5px;
-            margin-right: 20px;
+            margin-right: 0px;
             display: inline-block;
             padding:10px;
-            text-align: justify;
+            text-align: left;
+            font-size: 15px;
 
             vertical-align: bottom;
         }
 
-        .training-course-download-link{
+        .training-course-download-linkbox{
             display: inline-flex;
-            margin-top: 10px;
+            margin-top: 20px;
             margin-left: 5px;
             margin-right: 5px;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
+            width: 48.6%;
 
-            color: gold;
+            text-align: center;
+            height: 35px;
+            line-height: 35px;
+            background-color: gold;
+
+            
             cursor: pointer;
+        }
+
+        .training-course-download-link{
+            font-weight: 600;
+            color: #0b0b0b;
+            width: 100%;
         }
 
         .training-course-download-link :visited{
@@ -293,6 +348,11 @@
             <!--title bar-->
             <div class="header-top">
                 <div class="header-title">croissant</div>
+                <div class="header-nav">
+                    <div class="nav-link">training</div>
+                    <div class="nav-link">scripts</div>
+                    <div class="nav-link">snippets</div>
+                </div>
             </div>
             <!--header image & text-->
             <div class="header-image">
@@ -328,15 +388,15 @@
                     <div class="training-course-title">Basic T-SQL Querying</div>
                     <div class="training-course-image" id="tc-basic"></div>
                     <div class="training-course-description"><!--54 words-->
-                        This course provides a basic overview of SQL Server, relational database theory, database building blocks and an introduction into the T-SQL language and its syntax.</br> 
+                        This course provides a basic overview of SQL Server, relational database theory, database building blocks and an introduction into the T-SQL language and its syntax.
                         The T-SQL section covers SELECT, FROM, WHERE, UPDATE, JOIN, and Transactions and their importance.</br>
                         Additionally, this course also contains a practical exercise portion, to familiarise trainees with the course content.</br>
                         </br>
                         <b>Updated:</b> 2021
                     </div>
                     <div class="training-course-downloads">
-                        <div class="training-course-download-link">Slide Deck</div>
-                        <div class="training-course-download-link">Script Pack</div>
+                        <div class="training-course-download-linkbox"><a class="training-course-download-link">Slide Deck</a></div>
+                        <div class="training-course-download-linkbox"><a class="training-course-download-link">Script Pack</a></div>
                     </div>
                 </div>
 
@@ -348,8 +408,8 @@
                         <span style="line-height: 196px;">This course is upcoming.</span>
                     </div>
                     <div class="training-course-downloads">
-                        <div class="training-course-download-link">Slide Deck</div>
-                        <div class="training-course-download-link">Script Pack</div>
+                        <!--<div class="training-course-download-linkbox"><a class="training-course-download-link">Slide Deck</a></div>
+                        <div class="training-course-download-linkbox"><a class="training-course-download-link">Script Pack</a></div>-->
                     </div>
                 </div>
 
@@ -364,8 +424,8 @@
                         <b>Updated:</b> 2021    
                     </div>
                     <div class="training-course-downloads">
-                        <div class="training-course-download-link">Slide Deck</div>
-                        <div class="training-course-download-link">Script Pack</div>
+                        <div class="training-course-download-linkbox"><a class="training-course-download-link">Slide Deck</a></div>
+                        <div class="training-course-download-linkbox"><a class="training-course-download-link">Script Pack</a></div>
                     </div>
                 </div>
 
@@ -377,8 +437,8 @@
                         <span style="line-height: 196px;">This course is upcoming.</span>
                     </div>
                     <div class="training-course-downloads">
-                        <div class="training-course-download-link">Slide Deck</div>
-                        <div class="training-course-download-link">Script Pack</div>
+                        <!--<div class="training-course-download-linkbox"><a class="training-course-download-link">Slide Deck</a></div>
+                        <div class="training-course-download-linkbox"><a class="training-course-download-link">Script Pack</a></div>-->
                     </div>
                 </div>
 
@@ -418,6 +478,9 @@
         
 
         <!--footer-->
+        <div class="footer" style="margin-bottom: -10vh;">
+            <span style="color: gold;">&#183;</span> shh, this is a secret debug footer &#128521; this window is:  <span id="debug">1440 x 821</span> <span style="color: gold;">&#183;</span>
+        </div>
         <div class="footer">
             <div class="footer-element"><span style="color: gold;">&#183;</span></div>
             <div class="footer-element">02021 dark-coffee</div>
