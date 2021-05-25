@@ -534,6 +534,171 @@
                 padding-bottom: 20px;
             }
         }
+
+        /* DESKTOP EDITS */
+        @media only screen and (min-width: 771px) {
+            .header-image-text{
+                height: 230px;
+                width: 100vw;
+                background: rgba(0,0,0,0.25);
+                text-align: center;
+                line-height: 230px;
+                font-weight: 600;
+                font-size: 70px;
+                color: #f8f8f8;
+                padding: 0px;
+            }
+
+            .main-content{
+                background-color: rgba(29,30,32,1);
+                min-height: 500px;
+                height: auto;
+                padding-top: 80px;
+                text-align: center;
+            }
+
+            .header-nav{
+                display: inline-block;
+            }
+
+            .about-text{
+                height: 100px;
+                width: calc(40vw - 100px);
+                max-width: 700px;
+                text-align: left;
+                vertical-align: text-top;
+                margin-top: -30px;
+                margin-left: auto;
+                margin-bottom: 30px;
+                margin-right: auto;
+                padding-left: 10px;
+                display: inline-flex;
+                vertical-align: bottom;
+
+                font-weight: 300;
+            }
+
+            .about-image{
+                height: 100px;
+                width: 100px;
+                margin-top: -30px;
+                margin-bottom: 10px;
+                border-radius: 50%;
+                background-image: url(./assets/profile.png);
+                background-size: contain;
+                display: inline-flex;
+                vertical-align: bottom;
+                
+            }
+
+            .footer{
+                padding: 0px;
+            }
+
+            .training-course{
+                border: 3px solid #3b3b3b;
+
+                width: 60vw;
+                max-width: 900px;
+                margin-top: 20px;
+                margin-left: auto;
+                margin-bottom: 30px;
+                margin-right: auto;
+
+                padding-top: 20px;
+                padding-left: 20px;
+                padding-right: 20px;
+
+                text-align: center;
+            }
+
+            .training-course-title{
+                text-align: left;
+                font-weight: 500;
+                font-size: 22px;
+                margin-bottom: 15px;
+                text-align: left;
+                margin-left: 5px;
+            }
+
+            .training-course-image{
+                min-height: 216px;
+                min-width:384px;
+                height: auto;
+                object-fit: cover;
+                
+                width: 48.7%;
+                background-color: #2b2b2b;
+                background-size: cover;
+                margin-bottom: 5px;
+                display: inline-block;
+                vertical-align: bottom;
+                margin-left: 0px;
+                margin-right: 5px;
+            }
+
+            .training-course-description{
+                height:196px;
+                /*width:calc(60vw - 384px - 20px - 12px - 18px - 5px);*/
+                min-width: calc(48.6% - 20px);
+                width: calc(48.6% - 20px);
+                margin-left: 5px;
+                margin-bottom: 5px;
+                margin-right: 0px;
+                display: inline-block;
+                padding:10px;
+                text-align: left;
+                font-size: 16px;
+                font-weight: 300;
+
+                vertical-align: bottom;
+            }
+
+            .training-course-download-linkbox{
+                display: inline-flex;
+                margin-top: 20px;
+                margin-left: 5px;
+                margin-right: 5px;
+                margin-bottom: 20px;
+                width: 48.6%;
+
+                text-align: center;
+                height: 35px;
+                line-height: 35px;
+                background-color: gold;
+
+                
+                cursor: pointer;
+            }
+
+            .training-course-download-link{
+                font-weight: 600;
+                color: #0b0b0b;
+                width: 100%;
+            }
+
+            .training-course-download-link:visited{
+                background-color: rgb(179, 179, 179);
+            }
+
+            .training-course-download-link:hover{
+                background-color: rgb(238, 202, 0);
+                color:#0b0b0b;
+            }
+
+            .training-course-download-link-disabled{
+                background-color: darkgrey;
+                width: 100%;
+                color: grey;
+                cursor: not-allowed;
+            }
+            .training-course-download-link-disabled:hover{
+                color: grey;
+            }
+            .training-course-downloads{
+                margin:0px;
+            }
+        }
         
     </style>
 </head>
