@@ -1,0 +1,921 @@
+<!doctype html>
+<html>
+<head>
+    <title>croissant</title>
+
+    <!--favicons-->
+    <link rel="shortcut icon" href="./favicon.ico"/>
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png"/>
+
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600&display=swap" rel="stylesheet">
+
+    <!--css-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        
+        body{
+            overflow-x: hidden;
+            font-family: 'Montserrat', 'Avenir', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: rgba(29,30,32,1);
+            color: #f8f8f8;
+            cursor: default;
+        }
+
+        a{
+            color: gold;
+            text-decoration: none;
+            margin: 0;
+        }
+
+        a:hover {
+            color: #FFD700;
+        }
+
+        a:active, a:visited{
+            color: gold;
+        }
+
+        .container{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header{
+            height: auto;
+            width: 100vw;
+            /*background-color: orange;*/
+            user-select: none;
+            -moz-user-select: none;
+        }
+
+        .header-top{
+            height: 90px;
+            width: 100vw;
+            background-color: rgba(29,30,32,1);
+            box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+        }
+
+        .header-title{
+            color: #f8f8f8;
+            font-size: 35px;
+            line-height: 90px;
+            padding-left: 30px;
+            font-weight: 100;
+            width: 20%; 
+        }
+
+        .header-nav{
+            height: 90px;
+            width: auto;
+            position: absolute;
+            top: 0px;
+            right:30px;
+            line-height: 90px;
+        }
+
+        .nav-link{
+            display: inline-block;
+            margin-left: 0px;
+            margin-right: 10px;
+            width: 90px;
+            text-align: center;
+            color: #f8f8f8;
+            cursor: pointer;
+            font-weight: 200;
+        }
+
+        .nav-link:hover{
+            color: gold;
+        }
+
+        .header-image, .header-image-2{
+            height: 230px;
+            width: 100vw;
+            background-image: url('./croissant.png');
+            background-color: #FFD700;
+            background-size: 46px;
+            background-repeat: repeat;
+        }
+
+        .header-image-2{
+            height: 230px;
+            width: 100vw;
+            background-image: url('./assets/donut/donut.png');
+            background-color: pink;
+            background-size: 46px;
+            background-repeat: repeat;
+            margin-top: 75px;
+            display: none;
+        }
+
+        .header-image-text{
+            height: 230px;
+            width: 100vw;
+            background: rgba(0,0,0,0.25);
+            text-align: center;
+            line-height: 230px;
+            font-weight: 600;
+            font-size: 70px;
+            color: #f8f8f8;
+        }
+
+        .main-content{
+            background-color: rgba(29,30,32,1);
+            min-height: 500px;
+            height: auto;
+            padding-top: 80px;
+            text-align: center;
+        }
+
+        
+
+
+        /********************/
+        /* info styling     */
+        /********************/
+        .about-text{
+            height: 100px;
+            width: calc(40vw - 100px);
+            max-width: 700px;
+            text-align: left;
+            vertical-align: text-top;
+            margin-top: -30px;
+            margin-left: auto;
+            margin-bottom: 30px;
+            margin-right: auto;
+            padding-left: 10px;
+            display: inline-flex;
+            vertical-align: bottom;
+
+            font-weight: 300;
+        }
+
+        .about-image{
+            height: 100px;
+            width: 100px;
+            margin-top: -30px;
+            margin-bottom: 10px;
+            border-radius: 50%;
+            background-image: url(./assets/profile.png);
+            background-size: contain;
+            display: inline-flex;
+            vertical-align: bottom;
+            
+        }
+
+        /********************/
+
+
+        /********************/
+        /* divider          */
+        /********************/
+
+        .divider{
+            height: 3px;
+            width: 20vw;
+            margin-top: 60px;
+            margin-bottom: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #2b2b2b;
+            opacity: .5;
+            display: block;
+        }
+
+
+        /********************/
+
+
+        /********************/
+        /* section styling  */
+        /********************/
+
+        .content-section-heading{
+            font-size: 32px;
+            font-weight: bold;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 50px;
+            padding-left: 6px;
+            padding-right: 6px;
+            width: fit-content;
+
+            font-weight: 500;
+            background: linear-gradient(45deg,rgb(212, 181, 0) 60%, goldenrod 100%);
+            background-repeat: no-repeat;
+            background-size: 100% .3em;
+            background-position: 0 95%;
+        }
+
+
+        /********************/
+
+
+        /********************/
+        /* training courses */
+        /********************/
+        .training-course{
+            border: 3px solid #3b3b3b;
+
+            width: 60vw;
+            max-width: 900px;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-bottom: 30px;
+            margin-right: auto;
+
+            padding-top: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+
+            text-align: center;
+        }
+
+        .training-course-title{
+            text-align: left;
+            font-weight: 500;
+            font-size: 22px;
+            margin-bottom: 15px;
+            text-align: left;
+            margin-left: 5px;
+        }
+
+        .training-course-image{
+            min-height: 216px;
+            min-width:384px;
+            height: auto;
+            object-fit: cover;
+            
+            width: 48.7%;
+            background-color: #2b2b2b;
+            background-size: cover;
+            margin-bottom: 5px;
+            display: inline-block;
+            vertical-align: bottom;
+            margin-left: 0px;
+            margin-right: 5px;
+        }
+
+        .training-course-description{
+            height:196px;
+            /*width:calc(60vw - 384px - 20px - 12px - 18px - 5px);*/
+            width: calc(48.6% - 20px);
+            margin-left: 5px;
+            margin-bottom: 5px;
+            margin-right: 0px;
+            display: inline-block;
+            padding:10px;
+            text-align: left;
+            font-size: 16px;
+            font-weight: 300;
+
+            vertical-align: bottom;
+        }
+
+        .training-course-download-linkbox{
+            display: inline-flex;
+            margin-top: 20px;
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-bottom: 20px;
+            width: 48.6%;
+
+            text-align: center;
+            height: 35px;
+            line-height: 35px;
+            background-color: gold;
+
+            
+            cursor: pointer;
+        }
+
+        .training-course-download-link{
+            font-weight: 600;
+            color: #0b0b0b;
+            width: 100%;
+        }
+
+        .training-course-download-link:visited{
+            background-color: rgb(179, 179, 179);
+        }
+
+        .training-course-download-link:hover{
+            background-color: rgb(238, 202, 0);
+            color:#0b0b0b;
+        }
+
+        .training-course-download-link-disabled{
+            background-color: darkgrey;
+            width: 100%;
+            color: grey;
+            cursor: not-allowed;
+        }
+        .training-course-download-link-disabled:hover{
+            color: grey;
+        }
+
+        
+
+        /* Slides */
+        #tc-basic{background-image: url(./resources/courses/tsql_basics/slide.jpg);}
+        #tc-advanced{background-image: url(./resources/courses/tsql_advanced/slide.jpeg);}
+        #tc-config{background-image: url(./resources/courses/sql_server_config/slide.jpeg);}
+        #tc-placeholder{background-image: url(./assets/SQL4_1920.jpg);}
+        /********************/
+
+
+        /********************/
+        /* Scripts          */
+        /********************/
+
+
+        .script{
+            border: 3px solid #3b3b3b;
+            height: auto;
+            min-height: 100px;
+            width: 60vw;
+            max-width: 900px;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-bottom: 30px;
+            margin-right: auto;
+
+            padding-top: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+
+            text-align: center;
+        }
+
+        .script-title{
+            text-align: left;
+            font-weight: 500;
+            font-size: 22px;
+            margin-bottom: 15px;
+            text-align: left;
+            margin-left: 5px;
+        }
+
+        .script-description{
+            text-align: justify;
+            font-weight: 300;
+        }
+
+        .script-download{
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 30%;
+
+            text-align: center;
+            height: 35px;
+            line-height: 35px;
+            background-color: gold;
+            color: #0b0b0b;
+            
+            cursor: pointer;
+        }
+
+        /********************/
+
+
+        /* footer section */
+        .footer{
+            /*height: 250px;
+            width: 100vw;
+            background-color: #171718;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            position: relative;*/
+
+            width: 100vw;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            margin-top: 10vh;
+            margin-right:auto;
+            /*desktop margin margin-bottom: 5px;*/
+            /*mobile margin below*/
+            margin-bottom: 0px;
+            margin-left:auto;
+            font-size: 13px;
+            color: #666;
+            background-color: #171718;
+            user-select: none;
+            -moz-user-select: none;
+        }
+
+        .footer-text{
+            position: absolute;
+            bottom: 10px;
+            left:0px;
+            width: 100vw;
+            height: 14px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .footer-element{
+            display: inline-flex;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+
+        .scrolltop{
+            height: 40px;
+            width: 40px;
+            background-color: #3b3b3b;
+            color: #b9b9b9;
+            position: fixed;
+            bottom: 60px;
+            right: -100px;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 300;
+            font-size:25px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+            transition: all 0.65s;
+        }
+
+        .scrolltop:hover{
+            background-color: rgb(211, 179, 0);
+            color: #0b0b0b;
+        }
+
+        .hide {
+            opacity:0;
+            right: -100px;
+        }
+
+        .show {
+            opacity:1;
+            right:30px;
+        }
+
+        /******************/
+        /*MOBILE CSS EDITS*/
+        /******************/
+        /* Mobile */
+        @media only screen and (min-width: 414px) {
+            .main-content{
+                padding-top: 50px;
+            }
+
+            .header-image-text{
+                line-height: 70px;
+                font-size: 50px;
+                padding-top: 38px;
+            }
+
+            .header-nav{
+                display: none;
+            }
+
+            .about-image{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: -30px;
+            }
+
+            .about-text{
+                display: block;
+                width: 80vw;
+                margin-top: 10px;
+                margin-bottom: 100px;
+                font-weight: 200;
+            }
+
+            .training-course, .script{
+                width: 90vw;
+                padding-left: 0;
+                padding-right: 0;
+                height: fit-content;
+            }
+            .training-course-image{
+                margin:0;
+                min-width: 100%;
+                width: 100%;
+            }
+            .training-course-description, .script-description{
+                min-width: calc(100% - 20px);
+                width: calc(100% - 20px);
+                padding: 10px;
+                text-align: justify;
+                word-wrap: break-word;
+                display: block;
+                min-height: fit-content;
+                height: fit-content;
+                margin: 0px;
+                margin-top: 10px;
+            }
+            .training-course-downloads{
+                margin-bottom: 20px;
+            }
+            .training-course-download-linkbox, .script-download{
+                width: 90%;
+                margin-top: 10px;
+                margin-bottom: 0px;
+            }
+            .script-download{
+                display: block;
+                margin-bottom: 20px;
+            }
+            .footer{
+                padding-bottom: 20px;
+            }
+        }
+
+        /* DESKTOP EDITS */
+        @media only screen and (min-width: 771px) {
+            .header-image-text{
+                height: 230px;
+                width: 100vw;
+                background: rgba(0,0,0,0.25);
+                text-align: center;
+                line-height: 230px;
+                font-weight: 600;
+                font-size: 70px;
+                color: #f8f8f8;
+                padding: 0px;
+            }
+
+            .main-content{
+                background-color: rgba(29,30,32,1);
+                min-height: 500px;
+                height: auto;
+                padding-top: 80px;
+                text-align: center;
+            }
+
+            .header-nav{
+                display: inline-block;
+            }
+
+            .about-text{
+                height: 100px;
+                width: calc(40vw - 100px);
+                max-width: 700px;
+                text-align: left;
+                vertical-align: text-top;
+                margin-top: -30px;
+                margin-left: auto;
+                margin-bottom: 30px;
+                margin-right: auto;
+                padding-left: 10px;
+                display: inline-flex;
+                vertical-align: bottom;
+
+                font-weight: 300;
+            }
+
+            .about-image{
+                height: 100px;
+                width: 100px;
+                margin-top: -30px;
+                margin-bottom: 10px;
+                border-radius: 50%;
+                background-image: url(./assets/profile.png);
+                background-size: contain;
+                display: inline-flex;
+                vertical-align: bottom;
+                
+            }
+
+            .footer{
+                padding: 0px;
+            }
+
+            .training-course{
+                border: 3px solid #3b3b3b;
+
+                width: 60vw;
+                max-width: 900px;
+                margin-top: 20px;
+                margin-left: auto;
+                margin-bottom: 30px;
+                margin-right: auto;
+
+                padding-top: 20px;
+                padding-left: 20px;
+                padding-right: 20px;
+
+                text-align: center;
+            }
+
+            .training-course-title{
+                text-align: left;
+                font-weight: 500;
+                font-size: 22px;
+                margin-bottom: 15px;
+                text-align: left;
+                margin-left: 5px;
+            }
+
+            .training-course-image{
+                min-height: 216px;
+                min-width:384px;
+                height: auto;
+                object-fit: cover;
+                
+                width: 48.7%;
+                background-color: #2b2b2b;
+                background-size: cover;
+                margin-bottom: 5px;
+                display: inline-block;
+                vertical-align: bottom;
+                margin-left: 0px;
+                margin-right: 5px;
+            }
+
+            .training-course-description{
+                height:196px;
+                /*width:calc(60vw - 384px - 20px - 12px - 18px - 5px);*/
+                min-width: calc(48.6% - 20px);
+                width: calc(48.6% - 20px);
+                margin-left: 5px;
+                margin-bottom: 5px;
+                margin-right: 0px;
+                display: inline-block;
+                padding:10px;
+                text-align: left;
+                font-size: 16px;
+                font-weight: 300;
+
+                vertical-align: bottom;
+            }
+
+            .training-course-download-linkbox{
+                display: inline-flex;
+                margin-top: 20px;
+                margin-left: 5px;
+                margin-right: 5px;
+                margin-bottom: 20px;
+                width: 48.6%;
+
+                text-align: center;
+                height: 35px;
+                line-height: 35px;
+                background-color: gold;
+
+                
+                cursor: pointer;
+            }
+
+            .training-course-download-link{
+                font-weight: 600;
+                color: #0b0b0b;
+                width: 100%;
+            }
+
+            .training-course-download-link:visited{
+                background-color: rgb(179, 179, 179);
+            }
+
+            .training-course-download-link:hover{
+                background-color: rgb(238, 202, 0);
+                color:#0b0b0b;
+            }
+
+            .training-course-download-link-disabled{
+                background-color: darkgrey;
+                width: 100%;
+                color: grey;
+                cursor: not-allowed;
+            }
+            .training-course-download-link-disabled:hover{
+                color: grey;
+            }
+            .training-course-downloads{
+                margin:0px;
+            }
+        }
+        
+    </style>
+</head>
+<body onresize="debugWindowSize();" onload="debugWindowSize();">
+
+    <!--content wrapper-->
+    <div class="container">
+
+        <!--header-->
+        <div class="header" id="header">
+            <!--title bar-->
+            <div class="header-top">
+                <div class="header-title">croissant</div>
+                <div class="header-nav">
+                    <div class="nav-link" onclick="scrollTraining();">training</div>
+                    <div class="nav-link" onclick="scrollScripts();">scripts</div>
+                    <div class="nav-link" onclick="scrollSnippets();">snippets</div>
+                </div>
+            </div>
+            <!--header image & text-->
+            <div class="header-image">
+                <div class="header-image-text">Microsoft SQL Server Stuff</div>
+            </div>
+        </div>
+
+
+        <!--main content area-->
+        <div class="main-content">
+
+            <div class="content-section">
+                <div class="content-section-heading">Hello There! <!--general kenobi!--></div>
+                <div class="about-image"></div>
+                <div class="about-text">
+                    <p>
+                        I'm Andy, author of this pastry-themed SQL repository.</br>
+                        Here you'll find a selection of SQL Server training courses that I've authored, downloadable script files and useful snippets of T-SQL.</br></br>
+                        You can find me over at <a href="https://shadow.coffee">shadow.coffee</a></br>
+                    </p>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!--section 1: training courses-->
+            <div class="content-section" id="training">
+                <!--header-->
+                <div class="content-section-heading">Training Courses</div>
+
+                <!--course 1: T-SQL Basics-->
+                <div class="training-course">
+                    <div class="training-course-title">Basic T-SQL Querying</div>
+                    <div class="training-course-image" id="tc-basic"></div>
+                    <div class="training-course-description"><!--54 words-->
+                        This course provides a basic overview of SQL Server, relational database theory, database building blocks and an introduction into the T-SQL language and its syntax.
+                        The T-SQL section covers SELECT, FROM, WHERE, UPDATE, JOIN, and Transactions and their importance.</br>
+                        Additionally, this course also contains a practical exercise portion, to familiarise trainees with the course content.</br>
+                        </br>
+                        <span style="font-weight: 500;">Updated:</span>  May 02021    
+                    </div>
+                    <div class="training-course-downloads">
+                        <div class="training-course-download-linkbox"><a class="training-course-download-link">Slide Deck</a></div>
+                        <div class="training-course-download-linkbox"><a class="training-course-download-link">Script Pack</a></div>
+                    </div>
+                </div>
+
+                <!--course 2: Advanced T-SQL-->
+                <div class="training-course">
+                    <div class="training-course-title">Advanced T-SQL Querying</div>
+                    <div class="training-course-image" id="tc-placeholder"></div>
+                    <div class="training-course-description">
+                        <span style="line-height: 196px;">This course is upcoming.</span>
+                    </div>
+                    <div class="training-course-downloads">
+                        <div class="training-course-download-linkbox"><a class="training-course-download-link-disabled">Slide Deck</a></div>
+                        <div class="training-course-download-linkbox"><a class="training-course-download-link-disabled">Script Pack</a></div>
+                    </div>
+                </div>
+
+                <!--course 3: SQL Server Configuration-->
+                <div class="training-course">
+                    <div class="training-course-title">SQL Server Configuration</div>
+                    <div class="training-course-image" id="tc-config"></div>
+                    <div class="training-course-description">
+                        This course covers functional elements of SQL Server, configuration options, backup and restore processes, performance tips, and provides guidance on determining optimal configuration.</br>
+                        This couse also covers usage of sp_configure, compatibility levels, and service level options such as Instant File Initialization.</br>
+                        </br>
+                        <span style="font-weight: 500;">Updated:</span>  May 02021    
+                    </div>
+                    <div class="training-course-downloads">
+                        <div class="training-course-download-linkbox"><a class="training-course-download-link">Slide Deck</a></div>
+                        <div class="training-course-download-linkbox"><a class="training-course-download-link">Script Pack</a></div>
+                    </div>
+                </div>
+
+                <!--course 4: SQL Server Extended Events-->
+                <div class="training-course">
+                    <div class="training-course-title">SQL Server Extended Events</div>
+                    <div class="training-course-image" id="tc-placeholder"></div>
+                    <div class="training-course-description">
+                        <span style="line-height: 196px;">This course is upcoming.</span>
+                    </div>
+                    <div class="training-course-downloads">
+                        <div class="training-course-download-linkbox"><a class="training-course-download-link-disabled">Slide Deck</a></div>
+                        <div class="training-course-download-linkbox"><a class="training-course-download-link-disabled">Script Pack</a></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="content-section">
+                <div class="content-section-heading"  id="scripts">Scripts</div>
+                <div class="script">
+                    <div class="script-title">Ad Hoc Workload Calculator</div>
+                    <div class="script-description">
+                        This script determines what percentage of the workload performed by the SQL Server Instance is "Ad Hoc".</br> 
+                        The returned value is useful when determining whether to enable 'Optimize for Ad Hoc Workloads' when assessing performance. Note that the instance should be online for at least ~1 month for this value to be most accurate.</br>
+                        The <span style="color: goldenrod;">sys.configurations</span> id for this value is: <span style="font-weight: 500;">1581</span>.
+                    </div>
+                    <div class="script-download">download</div>
+                </div>
+                <div class="script">
+                    <div class="script-title">SQL Server Quick Configure</div>
+                    <div class="script-description"></div>
+                    <div class="script-download">download</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="content-section"  id="snippets">
+                <div class="content-section-heading">Snippets</div>
+                <div class="snippet">
+                    <div class="snippet-title">Show Execution Statistics</div>
+                    <div class="snippet-code">STATISTICS TIME, IO ON;</div>
+                </div>
+                <div class="snippet">
+                    <div class="snippet-title">Brent Ozar: sp_BlitzIndex - Columnstore Only</div>
+                    <div class="snippet-code">sp_BlitzIndex @TableName = '<table>', @ShowColumnstoreOnly = 1;</div>
+                </div>
+            </div>
+
+            <div class="header-image-2">
+                <div class="header-image-text">Oracle SQL Stuff</div>
+            </div>
+        </div>
+
+        
+
+        <!--footer-->
+        <div class="footer" style="margin-bottom: -10vh; background-color: rgba(29,30,32,1); color: #3b3b3b; padding-bottom: 0px;">
+            <span style="color: gold;">&#183;</span> shh, this is a secret debug footer <span style="color: gold;">&#183;</span> this window is:  <span id="debug">1440 x 821</span> <span style="color: gold;">&#183;</span>
+        </div>
+        <div class="footer">
+            <div class="footer-element"><span style="color: gold;">&#183;</span></div>
+            <div class="footer-element">02021 dark-coffee</div>
+            <div class="footer-element"><span style="color: gold;">&#183;</span></div>
+            <div class="footer-element">powered by github pages</div>
+            <div class="footer-element"><span style="color: gold;">&#183;</span></div>
+        </div>
+
+
+
+        <!--scroll to top-->
+        <div class="scrolltop" id="scrolltop" onclick="scrollHeader();">&uarr;</div>
+
+
+
+        <!--javascript-->
+        <script>
+            //Debug: Window Size
+            function debugWindowSize () {
+    
+                //Define Variables
+                var debugWindowWidth = window.innerWidth;
+                var debugWindowHeight = window.innerHeight;
+                var debugWindowDisplay = document.getElementById("debug");
+    
+                //Write Size to Screen
+                debugWindowDisplay.innerHTML = debugWindowWidth + " x " + debugWindowHeight;
+    
+            };
+
+            function scrollTraining () {
+                var element = document.getElementById("training");
+                element.scrollIntoView({behavior: "smooth", block: "start"});
+            }
+
+            function scrollScripts () {
+                var element = document.getElementById("scripts");
+                element.scrollIntoView({behavior: "smooth", block: "start"});
+            }
+
+            function scrollSnippets () {
+                var element = document.getElementById("snippets");
+                element.scrollIntoView({behavior: "smooth", block: "start"});
+            }
+
+            function scrollHeader () {
+                var element = document.getElementById("header");
+                element.scrollIntoView({behavior: "smooth", block: "start"});
+            }
+
+            myID = document.getElementById("scrolltop");
+
+            var showScrollHeader = function () {
+                var y = window.scrollY;
+                if (y >= 300) {
+                    myID.className = "scrolltop show"
+                } else {
+                    myID.className = "scrolltop hide"
+                }
+            };
+
+            window.addEventListener("scroll", showScrollHeader);
+        </script>
+    </div>
+</body>
+</html>
